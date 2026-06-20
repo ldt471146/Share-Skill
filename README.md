@@ -9,6 +9,8 @@
 | Skill | 用途 | 路径 |
 | --- | --- | --- |
 | Teach Step By Step | 用小步、可确认的方式教学文件、文章、代码、技术概念或 skill 设计。 | [`teach-step-by-step/`](teach-step-by-step/) |
+| Skill-Based Architecture | 把散落的 Agent 规则、薄壳入口、工作流和参考资料整理成可路由、可验证、可维护的 skill 架构。 | [`skill-based-architecture/`](skill-based-architecture/) |
+| CNKI Search | 使用本地 `cnki` CLI 在中国知网检索论文、获取详情、提取参考文献并输出表格或 GB/T 7714 引用格式。 | [`cnki-search/`](cnki-search/) |
 
 ## 使用方式
 

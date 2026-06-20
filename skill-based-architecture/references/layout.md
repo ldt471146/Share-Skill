@@ -1,0 +1,195 @@
+# Reference — Layout & Structure
+
+## Recommended Layout
+
+```text
+project/
+├── skills/
+│   └── <name>/
+│       ├── SKILL.md
+│       ├── rules/
+│       │   ├── project-rules.md
+│       │   ├── coding-standards.md
+│       │   └── <domain>-rules.md
+│       ├── workflows/
+│       │   └── <task>.md
+│       ├── references/
+│       │   ├── gotchas.md         # recommended: known gotchas / footguns
+│       │   └── <topic>.md
+│       └── docs/                  # optional: prompts, reports, external material
+├── AGENTS.md                      # thin shell (universal)
+├── CLAUDE.md                      # thin shell (Claude)
+├── CODEX.md                       # thin shell (Codex)
+├── .cursor/rules/*.mdc            # thin shells (Cursor)
+└── .claude/                       # thin shells (Claude Code)
+```
+
+For growth/topology decisions (when to upgrade tier, when to split into multiple skills), see [progressive-rigor.md](progressive-rigor.md). For where this skill sits in the broader agent stack, see the "Positioning" section at the bottom of this file.
+
+## SKILL.md Template
+
+```md
+---
+name: <project-name>
+description: >
+  This skill should be used when the user asks to "<trigger phrase 1 in real user language>",
+  "<trigger phrase 2>", or "<trigger phrase 3>".
+  Activate when <condition 1> or <condition 2>.
+primary: true
+---
+
+# <Project Name>
+
+One-line summary.
+
+## Always Read
+
+These files apply to every task. Read them first:
+1. `rules/project-rules.md`
+2. `rules/coding-standards.md`
+
+Keep this list to 2–3 files max. Domain-specific rules do NOT go here.
+
+## Common Tasks
+
+Each task entry lists the exact files to read — don't read files not listed for your task:
+
+- Add feature X → read `rules/<domain>-rules.md` + follow `workflows/<task>.md`
+- Add feature Y → read `rules/<domain>-rules.md` + follow `workflows/<task>.md`; ref: `references/<topic>.md`
+- Fix bug → read task-relevant `rules/*.md` + follow `workflows/fix-bug.md`; ref: `references/gotchas.md`
+- **Other / unlisted task** → read `rules/project-rules.md` + `rules/coding-standards.md` (Already Read above), then match by workflow filename (verb-noun convention: `add-page.md`, `fix-bug.md`, etc.). If no filename matches, proceed with just the Always Read rules.
+
+## Known Gotchas
+
+Brief, scannable list of the most costly pitfalls. Full details in `references/gotchas.md`.
+
+- Gotcha 1: one-line summary → see `references/gotchas.md#section`
+- Gotcha 2: one-line summary → see `references/<topic>.md#section`
+
+## Rule Priority
+1. `skills/<name>/SKILL.md`
+2. `skills/<name>/rules/`
+3. `skills/<name>/workflows/`
+4. `skills/<name>/references/`
+5. Root `README.md`
+6. `.cursor/rules/*.mdc` / `.claude/` (compatibility only)
+
+## Project Boundaries
+- Boundary 1
+- Boundary 2
+```
+
+### Description as Trigger Condition
+
+The `description` field in frontmatter is **not** a passive summary — it is what the Agent uses at runtime to decide whether to activate the skill. It should answer "is this request in this skill's domain?", not "which workflow should run?" A vague description means the skill silently never fires; an overstuffed description becomes a brittle keyword list that competes with `SKILL.md` routing.
+
+**Bad** (too vague — Agent can't match it):
+```yaml
+description: Helps with API testing
+```
+
+**Good** (domain / intent-cluster phrases + activation conditions):
+```yaml
+description: >
+  This skill should be used when the user asks to work on this repository, such as
+  "这个接口报错了", "这里返回不对", "测试挂了", "fix this failing test",
+  or "debug this error".
+  Activate when the task requires this repo's code, rules, workflows,
+  known gotchas, or validation commands.
+```
+
+Guidelines:
+- **Enough length** — aim for ≥ 20 English-style words or ≥ 40 CJK characters; short descriptions fail to activate reliably
+- **Use the user's actual language(s)** — if users ask in Chinese, include Chinese quoted phrases alongside English; do not rely on translation / semantic similarity alone
+- **Include quoted trigger phrases** — exact phrases the user would say for the skill's domain / intent cluster
+- **Third-person format** — "This skill should be used when…" not "I help with…"
+- **Include activation conditions** — describe the context, not just the action
+- **Do not enumerate workflows** — `fix-bug`, `release`, `maintain-docs`, etc. belong in Common Tasks unless they identify a separate domain skill
+
+#### Trap: a step-summary in the description suppresses reading the body
+
+The guidelines above prevent a *vague* or *keyword-stuffed* description. The opposite failure is a description that is too **procedural**. The `description` is always-loaded (injected for matching); the body loads on demand. An agent stops reading once it has "enough to act" — so a description that summarizes *how* the skill works becomes enough to act on, and the body is never opened. The agent then runs a lossy version of the procedure.
+
+Evidence (superpowers eval): a description reading `...dispatches subagent per task with code review between tasks` made the agent run **one** review though the body specified **two** (spec-compliance then code-quality); cutting it back to `Use when executing implementation plans with independent tasks` made the agent read the body and run both.
+
+This is distinct from keyword-stuffing: keyword-stuffing leaks *which workflows exist* (competes with routing); a step-summary leaks *how a workflow runs* (suppresses the body). A description can avoid the first and still fail the second.
+
+**Bad** (step-summary — agent acts on it, skips the workflow):
+```yaml
+description: Use when migrating rules — consolidate scattered docs into one skill folder and generate thin shells
+```
+
+**Good** (trigger only — agent must open the workflow to learn the steps):
+```yaml
+description: >
+  This skill should be used when the user asks to "把规则迁移到 skills 目录",
+  "整理项目规则", or "migrate project rules to skills".
+```
+
+**Check — applies at every summary→detail link, not just the description:** does the description, *or any Common Tasks row / `routing.yaml` label*, carry any HOW an agent could execute without opening the body or workflow file? If yes, the agent will do exactly that and skip the detail — strip it to WHEN + which-file; the steps live only in the body/workflow. (Same shortcut as Pitfall #8 "I already know the rules", generalized: any layer that leaks enough HOW gets the layer below it skipped.)
+
+Re-read the `description` block aloud after changing frontmatter. Listen for over-broad scope, workflow keyword stuffing, and (in multi-skill repos) duplicate trigger phrases between skills. No script substitutes for this judgment.
+
+The template above uses a two-tier structure:
+
+- **Always Read** (2–3 core files, ~150 lines total) — read every time; in the full scaffold this list is generated from `routing.yaml`
+- **Common Tasks** (task-routed) — Agent reads ONLY the files listed for the current task; in the full scaffold these rows are generated from `routing.yaml`; always include a fallback entry for unlisted tasks
+
+**Keep routing in sync:** When you create or rename an always-read, workflow, or reference file, add or update `routing.yaml`, then run `scripts/sync-routing.sh`. The `update-rules.md` workflow includes this as a checklist item.
+
+**Common Tasks sizing:** Keep entries to 8–10 tasks maximum. Beyond that, agents waste tokens scanning unrelated entries. If you have more than 10 recurring task types, group related tasks under domain headings (e.g., `### Backend Tasks`, `### Frontend Tasks`) or merge low-frequency tasks into the "Other" fallback.
+
+**"Other / unlisted task" matching:** The fallback entry should tell agents how to find the right workflow without reading every file. Workflow files use a verb-noun naming convention (`add-page.md`, `fix-bug.md`, `release.md`) — agents can match by filename alone. If that's not sufficient, add a one-line directory listing in the fallback entry: `Available workflows: add-controller, add-entity, fix-bug, release`.
+
+This keeps per-task reading to the minimum set needed, rather than loading all rules for every task.
+
+## Relation to Official Skill Template / Spec
+
+Anthropic's public [`skills` repository](https://github.com/anthropics/skills) defines the **minimal** skill shape: a folder with a `SKILL.md`, plus frontmatter where `name` identifies the skill and `description` explains what it does and when to use it.
+
+This meta-skill does **not** replace that minimum. It starts one level later:
+
+- Use the official-style minimal single `SKILL.md` when the skill is still small, self-contained, and not scattered across multiple entry files.
+- Upgrade to `skills/<name>/` with `rules/`, `workflows/`, and `references/` only when the skill starts to sprawl: long files, duplicated entries, or recurring knowledge that needs active maintenance.
+
+Rule of thumb:
+
+- Official template answers: "How do I create a valid skill?"
+- `skill-based-architecture` answers: "How do I keep a growing project skill precise, navigable, and maintainable?"
+
+Do not copy the full official spec into project docs. Link to the canonical source when helpful, and keep local docs focused on project structure and task routing.
+
+## Positioning in the Agent Stack
+
+Where this skill sits, and what it does **not** cover. Read this when an agent feels unstable and you need to decide whether the fix belongs here, in prompt phrasing, or in a different harness layer.
+
+### Three layers of agent reliability
+
+Agent reliability lives on three layers. This skill is **not** a silver bullet — it acts on the second and a slice of the third.
+
+| Layer | Question it answers | What this skill provides |
+|---|---|---|
+| **Prompt Engineering** | How do I phrase the task so the model understands? | Indirect — via the `description` frontmatter as a trigger condition, and via the writing style guidance for rules / workflows |
+| **Context Engineering** | How do I deliver the right information to the model? | **Primary focus** — two-layer routing (Always Read + Common Tasks), thin shells with inline routing, registration entry, progressive disclosure |
+| **Harness Engineering** | How does the surrounding system keep execution stable when the model alone is not enough? | **Partial** — Session Discipline + Rationalizations Table + SessionStart hook = a minimal harness for *context re-injection across long sessions* |
+
+### The Four-Primitive Audit
+
+When an agent feels unstable, the root cause is rarely the model. Ask these four questions before blaming the prompt:
+
+1. **State** — Is there an explicit marker of what step we are on, or does the agent re-derive it each turn?
+2. **Validation** — Is there a check at each critical node, or do we only verify at the end?
+3. **Orchestration** — Is there a task plan with checkpoints, or does every failure restart from step 1?
+4. **Recovery** — Is there a resume path after a failed step, or does the agent always re-run everything?
+
+Three "no"s = this is a harness problem, not a model problem. Re-tuning the prompt will not help.
+
+### What this skill does **not** cover
+
+Treat these as orthogonal concerns — do **not** extend this meta-skill's templates beyond the narrow migration scaffolding already provided:
+
+- **Tool-execution stability** (browser clicks that silently no-op, API calls that return half-complete responses, page DOM changing under the agent). Use a verification-focused skill (e.g. superpowers' `verification-before-completion`) or a dedicated tool-agent harness.
+- **General long-chain checkpoint / resume.** Migration is one-shot — if a phase crashes, the documented path is "wipe the partial scaffold and rerun" rather than a state machine. Broader application workflows that genuinely need pause/resume need project-specific state, validation, and recovery inside that project's own `rules/` or `workflows/`.
+- **Multi-agent orchestration.** See superpowers' `subagent-driven-development` or equivalent. This skill only routes *within one agent's session*.
+
+Adding state / validation / recovery primitives beyond the migration scaffold is that downstream project's own engineering work — it belongs in the project's `rules/` or `workflows/`, not in this meta-skill.

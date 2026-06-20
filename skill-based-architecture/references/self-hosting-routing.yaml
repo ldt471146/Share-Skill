@@ -1,0 +1,141 @@
+# Canonical self-hosting routing manifest
+#
+# This repo is self-hosting: formal skill docs live at repo root rather than
+# under skills/<name>/. Root harness files (AGENTS / CLAUDE / CODEX / GEMINI /
+# .cursor/rules/workflow.mdc) are generated from this manifest plus
+# references/self-hosting-shell-base.md and references/self-hosting-shells.yaml.
+# Edit any of those, then run:
+#
+#   bash scripts/sync-self-shells.sh
+#   bash scripts/check-self-shells.sh
+
+tasks:
+  - id: migrate-downstream
+    labels:
+      en: Migrate a downstream project's rules to skill-based architecture
+      zh: 迁移下游项目规则到 skill-based architecture
+    required_reads:
+      - SKILL.md
+      - WORKFLOW.md
+    workflow: WORKFLOW.md#quick-start
+    trigger_examples:
+      - 把规则迁移到 skills 目录
+      - 整理项目规则
+      - migrate project rules to skills
+
+  - id: edit-templates
+    labels:
+      en: Edit or extend templates
+      zh: 修改或扩展模板
+    required_reads:
+      - SKILL.md
+      - templates/README.md
+      - templates/ANTI-TEMPLATES.md
+    workflow: templates/skill/workflows/edit-templates.md
+    trigger_examples:
+      - 修改 templates
+      - 调整薄壳模板
+      - update the scaffold templates
+
+  - id: revise-skill-doc
+    labels:
+      en: Add or revise a skill principle, rule, or reference doc
+      zh: 新增或修改 skill 原则 / 规则 / reference 文档
+    required_reads:
+      - SKILL.md
+      - REFERENCE.md
+      - references/layout.md
+    workflow: templates/skill/workflows/update-rules.md
+    note: For routing / description hit-rate changes use improve-activation-routing instead
+    trigger_examples:
+      - 加一条核心原则
+      - 修改 skill 设计原则或规则
+      - 更新 reference 文档
+      - 新增参考文档
+      - revise a skill principle or rule
+      - revise a reference doc
+
+  - id: add-example
+    labels:
+      en: Add an example
+      zh: 新增示例
+    required_reads:
+      - EXAMPLES.md
+      - examples/behavior-failures.md
+    workflow: EXAMPLES.md
+    trigger_examples:
+      - 加一个 before after 示例
+      - 补一个行为失败例子
+      - add an example scenario
+
+  - id: fix-script-or-template-bug
+    labels:
+      en: Fix a bug in scripts or templates
+      zh: 修复脚本或模板 bug
+    required_reads:
+      - SKILL.md
+      - templates/skill/scripts/smoke-test.sh
+    workflow: templates/skill/workflows/fix-bug.md
+    trigger_examples:
+      - 脚本跑失败了
+      - 模板生成有问题
+      - fix this template bug
+
+  - id: improve-activation-routing
+    labels:
+      en: Improve skill activation and routing
+      zh: 优化 skill 触发 / 路由命中率
+    required_reads:
+      - SKILL.md
+      - references/layout.md
+      - references/multi-skill-routing.md
+    workflow: references/layout.md#description-as-trigger-condition
+    trigger_examples:
+      - description 命中率太低
+      - 优化 routing.yaml
+      - 用户说接口报错但没有命中 fix-bug
+      - improve trigger_examples coverage
+
+  - id: long-run
+    labels:
+      en: Multi-subtask / long autonomous run (cross-cutting modifier, not a standalone task)
+      zh: 多子任务 / 长时间自主任务(横切修饰符,不是独立任务)
+    required_reads:
+      - SKILL.md
+      - templates/skill/workflows/subagent-driven.md
+    workflow: templates/skill/workflows/subagent-driven.md
+    note: Apply ON TOP of the matched primary route (migrate-downstream, edit-templates, etc.); do not pick this instead of the task route. Layer it when the work is large or has independent parallel subtasks. Read subagent-driven.md to pick Mode 1 vs Mode 2 and dispatch non-blocking; subagent-contract.md is the Mode 2 contract template it points to
+    trigger_examples:
+      - 多个独立子任务并行
+      - 这个任务比较大
+      - run several subtasks
+
+  - id: plan-and-distill
+    labels:
+      en: Draft a plan; on close, lift load-bearing conclusions into rules / gotchas / pitfalls
+      zh: 写计划;结束时把有约束力的结论搬进 rules / gotchas / pitfalls
+    required_reads:
+      - SKILL.md
+      - docs/plans/README.md
+      - templates/skill/workflows/plan-feature.md
+      - templates/skill/workflows/update-rules.md
+    workflow: templates/skill/workflows/plan-feature.md
+    trigger_examples:
+      - 我们规划一下
+      - 制定一个 plan
+      - 这次改动总结成规则
+      - 把 plan 的结论沉淀下来
+      - 看看之前有没有相关 rules 或 pitfalls
+      - draft a plan
+      - distill plan conclusions
+      - scan related rules and gotchas
+
+  - id: other
+    labels:
+      en: Other
+      zh: 其他任务
+    required_reads:
+      - SKILL.md
+    workflow: WORKFLOW.md
+    trigger_examples:
+      - 其他没有明确路由的任务

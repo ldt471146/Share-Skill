@@ -1,0 +1,4 @@
+interface:
+  display_name: "一步一步教学"
+  short_description: "用小步教学拆解文件、概念和实现过程。"
+  default_prompt: "Use $teach-step-by-step to 用中文慢慢教我这个文件，并结合实际案例一步一步讲。"

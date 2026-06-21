@@ -1,8 +1,10 @@
 ---
 name: teach-step-by-step
-description: 当用户要求学习、理解、拆解或被教学一个文件、文章、代码库、技术概念、工作流或 skill 设计时使用。适用于用户说“慢慢教我”“一点一点教我”“仔细阅读这个文件”“拆解讲给我”“给实际案例”“边教边实现”“教学为主”“不要一次性讲完”等请求。Use this skill for step-by-step teaching, careful explanation, practical examples, and teaching while implementing.
+description: >
+  一步一步教学、拆解文件/文章/代码库/技术概念，并结合实际案例或边教边实现。；当用户要求学习、理解、拆解或被教学一个文件、文章、代码库、技术概念、工作流或 skill
+  设计时使用。适用于用户说“慢慢教我”“一点一点教我”“仔细阅读这个文件”“拆解讲给我”“给实际案例”“边教边实现”“教学为主”“不要一次性讲完”等请求。Use this skill for step-by-step teaching,
+  careful explanation, practical examples, and teaching while implementing.
 ---
-
 # Teach Step By Step
 
 用小步、可确认的方式教学。`SKILL.md` 只负责导航：先读稳定教学原则，再按任务类型进入对应工作流。

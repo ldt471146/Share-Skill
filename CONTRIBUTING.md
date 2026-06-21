@@ -1,44 +1,21 @@
-# 收录新 Skill
+# Contributing
 
-新增 skill 时，请按下面的检查顺序处理。
+这个仓库用于集中保存可复用的 AI Agent Skills。
 
-## 基本要求
+## 目录规则
 
-1. 新建一个独立目录，目录名使用小写字母、数字和连字符。
-2. 目录内必须有 `SKILL.md`。
-3. `SKILL.md` frontmatter 至少包含 `name` 和 `description`。
-4. `description` 写触发条件，不写宣传语。
-5. 不要把会话日志、调试流水或一次性说明塞进 skill。
+- 每个 skill 使用一个顶层目录。
+- 每个目录必须包含 `SKILL.md`。
+- 不要修改已有 skill 的 `name` 或目录名，避免破坏 agent 路由。
+- `description` 可以使用中文说明 + 英文触发语，便于中文用户识别，同时保留自动触发关键词。
 
-## 放置规则
+## 更新方式
 
-| 内容类型 | 推荐位置 |
-| --- | --- |
-| 触发条件、Always Read、Common Tasks | `SKILL.md` |
-| 所有任务都要遵守的稳定原则 | `rules/` |
-| 某类任务的执行步骤 | `workflows/` |
-| 详细案例、背景解释、坑点 | `references/` |
-| 可重复执行的检查、转换、生成逻辑 | `scripts/` |
+1. 将新的 skill 目录复制到仓库根目录。
+2. 确认每个 skill 目录都有 `SKILL.md`。
+3. 更新 `README.md` 和 `skills.json` 索引。
+4. 提交并推送。
 
-## 收录前检查
+## 注意
 
-至少做这几项：
-
-```powershell
-py -X utf8 "$env:USERPROFILE\.codex\skills\.system\skill-creator\scripts\quick_validate.py" ".\skill-name"
-```
-
-如果 skill 自带检查脚本，也要运行对应脚本。例如：
-
-```powershell
-py -X utf8 ".\skill-name\scripts\check_paths.py" ".\skill-name"
-```
-
-## 索引更新
-
-新增 skill 后，同步更新：
-
-- `README.md` 的“当前收录”表格
-- `skills.json`
-
-`skills.json` 用于让脚本或 Agent 快速了解仓库里有哪些 skill。
+部分 skill 来自第三方仓库。同步或修改时请保留原始文件结构，并自行确认许可证和适用范围。

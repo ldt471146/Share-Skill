@@ -1,14 +1,12 @@
 ---
 name: skill-based-architecture
 description: >
-  This skill should be used when the user asks to "organize the project rules",
-  "clean up scattered documentation", "把规则迁移到 skills 目录", "优化 skill 路由",
-  "提高 description 命中率", or "减少薄壳重复维护".
-  Activate when a SKILL.md is too large, rules are duplicated across agent entry
-  files, task routing or trigger_examples miss natural user language, or
-  templates / thin shells / validation scripts need drift-resistant maintenance.
+  整理和优化 skill/规则架构，适用于规则分散、SKILL.md 过大、description 命中率差或需要迁移到 skills 目录。；This skill should be used when the user asks to
+  "organize the project rules", "clean up scattered documentation", "把规则迁移到 skills 目录", "优化 skill 路由", "提高 description
+  命中率", or "减少薄壳重复维护". Activate when a SKILL.md is too large, rules are duplicated across agent entry files, task
+  routing or trigger_examples miss natural user language, or templates / thin shells / validation scripts need
+  drift-resistant maintenance.
 ---
-
 # Skill-Based Architecture
 
 Restructure oversized single-file Skills or scattered project rules into a well-organized Skill directory. Builds on the official minimal Agent Skill contract (`name` + `description`) and kicks in when a single small `SKILL.md` is no longer enough.

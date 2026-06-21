@@ -1,10 +1,11 @@
 ---
 name: request-refactor-plan
 description: >
-  通过访谈创建小提交粒度的重构计划，并作为 GitHub issue 发布。；Create a detailed refactor plan with tiny commits via user interview, then file
-  it as a GitHub issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe
-  incremental steps.
+  通过访谈创建小提交粒度的重构计划，并作为 GitHub issue 发布。；Create a detailed refactor plan with tiny commits via user interview, then
+  file it as a GitHub issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor
+  into safe incremental steps.
 ---
+
 This skill will be invoked when the user wants to create a refactor request. You should go through the steps below. You may skip steps if you don't consider them necessary.
 
 1. Ask the user for a long, detailed description of the problem they want to solve and any potential ideas for solutions.

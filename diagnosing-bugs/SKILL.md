@@ -1,9 +1,10 @@
 ---
 name: diagnosing-bugs
 description: >
-  诊断困难 bug 和性能回退，按复现、最小化、假设、埋点、修复、回归测试闭环推进。；Diagnosis loop for hard bugs and performance regressions. Use when the user
-  says "diagnose"/"debug this", or reports something broken/throwing/failing/slow.
+  诊断困难 bug 和性能回退，按复现、最小化、假设、埋点、修复、回归测试闭环推进。；Diagnosis loop for hard bugs and performance regressions. Use when the
+  user says "diagnose"/"debug this", or reports something broken/throwing/failing/slow.
 ---
+
 # Diagnosing Bugs
 
 A discipline for hard bugs. Skip phases only when explicitly justified.

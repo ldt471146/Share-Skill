@@ -1,11 +1,12 @@
 ---
 name: writing-beats
 description: >
-  把文章素材整理成 beat 旅程，一段一段选择方向并写成叙事。；Shape an article as a journey of beats, choose-your-own-adventure style. The user
-  picks a starting beat from the raw material, you write only that beat, then offer options for where to pivot next,
-  beat by beat, until the article reaches a natural end. Use when the user has raw material and wants to assemble it as
-  a narrative rather than an argument.
+  把文章素材整理成 beat 旅程，一段一段选择方向并写成叙事。；Shape an article as a journey of beats, choose-your-own-adventure style. The
+  user picks a starting beat from the raw material, you write only that beat, then offer options for where to
+  pivot next, beat by beat, until the article reaches a natural end. Use when the user has raw material and wants
+  to assemble it as a narrative rather than an argument.
 ---
+
 <what-to-do>
 
 The user has passed (or will pass) a markdown file of raw material.

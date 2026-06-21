@@ -2,9 +2,10 @@
 name: source-driven-development
 description: >
   用官方文档支撑实现决策，避免过时模式并保留来源引用。；Grounds every implementation decision in official documentation. Use when you want
-  authoritative, source-cited code free from outdated patterns. Use when building with any framework or library where
-  correctness matters.
+  authoritative, source-cited code free from outdated patterns. Use when building with any framework or library
+  where correctness matters.
 ---
+
 # Source-Driven Development
 
 ## Overview

@@ -1,10 +1,11 @@
 ---
 name: ci-cd-and-automation
 description: >
-  配置或修改 CI/CD、质量门禁、测试流水线和部署自动化。；Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment
-  pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment
-  strategies.
+  配置或修改 CI/CD、质量门禁、测试流水线和部署自动化。；Automates CI/CD pipeline setup. Use when setting up or modifying build and
+  deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish
+  deployment strategies.
 ---
+
 # CI/CD and Automation
 
 ## Overview

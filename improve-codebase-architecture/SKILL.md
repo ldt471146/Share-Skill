@@ -5,6 +5,7 @@ description: >
   report, then grill through whichever one you pick.
 disable-model-invocation: true
 ---
+
 # Improve Codebase Architecture
 
 Surface architectural friction and propose **deepening opportunities** — refactors that turn shallow modules into deep ones. The aim is testability and AI-navigability.

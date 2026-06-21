@@ -1,10 +1,11 @@
 ---
 name: performance-optimization
 description: >
-  基于测量优化性能，适用于性能需求、回归、Core Web Vitals 或加载时间问题。；Optimizes application performance. Use when performance requirements
-  exist, when you suspect performance regressions, or when Core Web Vitals or load times need improvement. Use when
-  profiling reveals bottlenecks that need fixing.
+  基于测量优化性能，适用于性能需求、回归、Core Web Vitals 或加载时间问题。；Optimizes application performance. Use when performance
+  requirements exist, when you suspect performance regressions, or when Core Web Vitals or load times need
+  improvement. Use when profiling reveals bottlenecks that need fixing.
 ---
+
 # Performance Optimization
 
 ## Overview

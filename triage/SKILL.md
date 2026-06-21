@@ -1,10 +1,11 @@
 ---
 name: triage
 description: >
-  按 triage 状态机处理 issues 和外部 PR，分类、核实、必要时追问并写 agent-ready brief。；Move issues and external PRs through a state machine of
-  triage roles — categorise, verify, grill if needed, and write agent-ready briefs.
+  按 triage 状态机处理 issues 和外部 PR，分类、核实、必要时追问并写 agent-ready brief。；Move issues and external PRs through a state
+  machine of triage roles — categorise, verify, grill if needed, and write agent-ready briefs.
 disable-model-invocation: true
 ---
+
 # Triage
 
 Move issues on the project issue tracker through a small state machine of triage roles.

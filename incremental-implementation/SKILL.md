@@ -1,10 +1,11 @@
 ---
 name: incremental-implementation
 description: >
-  分小步增量实现跨文件改动，避免一次写太多代码。；Delivers changes incrementally. Use when implementing any feature or change that touches more
-  than one file. Use when you're about to write a large amount of code at once, or when a task feels too big to land in
-  one step.
+  分小步增量实现跨文件改动，避免一次写太多代码。；Delivers changes incrementally. Use when implementing any feature or change that touches
+  more than one file. Use when you're about to write a large amount of code at once, or when a task feels too big
+  to land in one step.
 ---
+
 # Incremental Implementation
 
 ## Overview

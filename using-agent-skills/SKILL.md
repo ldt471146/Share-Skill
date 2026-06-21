@@ -1,10 +1,11 @@
 ---
 name: using-agent-skills
 description: >
-  总调度 skill，判断当前任务该调用哪个工程生命周期 skill。；Discovers and invokes agent skills. Use when starting a session or when you need to
-  discover which skill applies to the current task. This is the meta-skill that governs how all other skills are
-  discovered and invoked.
+  总调度 skill，判断当前任务该调用哪个工程生命周期 skill。；Discovers and invokes agent skills. Use when starting a session or when you
+  need to discover which skill applies to the current task. This is the meta-skill that governs how all other
+  skills are discovered and invoked.
 ---
+
 # Using Agent Skills
 
 ## Overview

@@ -1,9 +1,10 @@
 ---
 name: tdd
 description: >
-  使用红灯-绿灯-重构进行测试驱动开发，适用于 test-first 功能和 bug 修复。；Test-driven development. Use when the user wants to build features or
-  fix bugs test-first, mentions "red-green-refactor", or wants integration tests.
+  使用红灯-绿灯-重构进行测试驱动开发，适用于 test-first 功能和 bug 修复。；Test-driven development. Use when the user wants to build features
+  or fix bugs test-first, mentions "red-green-refactor", or wants integration tests.
 ---
+
 # Test-Driven Development
 
 ## Philosophy

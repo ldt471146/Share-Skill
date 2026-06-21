@@ -1,11 +1,12 @@
 ---
 name: handoff
 description: >
-  把当前对话压缩成交接文档，方便另一个 agent 或后续会话接手。；Compact the current conversation into a handoff document for another agent to pick
-  up.
+  把当前对话压缩成交接文档，方便另一个 agent 或后续会话接手。；Compact the current conversation into a handoff document for another agent to
+  pick up.
 argument-hint: "What will the next session be used for?"
 disable-model-invocation: true
 ---
+
 Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's OS - not the current workspace.
 
 Include a "suggested skills" section in the document, which suggests skills that the agent should invoke.

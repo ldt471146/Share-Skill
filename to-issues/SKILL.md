@@ -1,10 +1,11 @@
 ---
 name: to-issues
 description: >
-  把计划、规格或 PRD 拆成可独立领取的垂直切片 issues。；Break a plan, spec, or PRD into independently-grabbable issues on the project issue
-  tracker using tracer-bullet vertical slices.
+  把计划、规格或 PRD 拆成可独立领取的垂直切片 issues。；Break a plan, spec, or PRD into independently-grabbable issues on the project
+  issue tracker using tracer-bullet vertical slices.
 disable-model-invocation: true
 ---
+
 # To Issues
 
 Break a plan into independently-grabbable issues using vertical slices (tracer bullets).

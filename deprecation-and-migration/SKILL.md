@@ -2,9 +2,10 @@
 name: deprecation-and-migration
 description: >
   规划废弃、迁移和下线旧系统、API 或功能，决定维护、迁移还是淘汰。；Manages deprecation and migration. Use when removing old systems, APIs, or
-  features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or sunset
-  existing code.
+  features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or
+  sunset existing code.
 ---
+
 # Deprecation and Migration
 
 ## Overview

@@ -1,10 +1,11 @@
 ---
 name: ask-matt
 description: >
-  路由选择器，用来判断当前情况该走哪个 Matt Pocock skill 或工作流。；Ask which skill or flow fits your situation. A router over the user-invoked
-  skills in this repo.
+  路由选择器，用来判断当前情况该走哪个 Matt Pocock skill 或工作流。；Ask which skill or flow fits your situation. A router over the
+  user-invoked skills in this repo.
 disable-model-invocation: true
 ---
+
 # Ask Matt
 
 You don't remember every skill, so ask.

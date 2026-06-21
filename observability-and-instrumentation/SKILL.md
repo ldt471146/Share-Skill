@@ -1,10 +1,12 @@
 ---
 name: observability-and-instrumentation
 description: >
-  添加日志、指标、链路追踪和告警，让生产行为可观察、可诊断。；Instruments code so production behavior is visible and diagnosable. Use when adding
-  logging, metrics, tracing, or alerting. Use when shipping any feature that runs in production and you need evidence it
-  works. Use when production issues are reported but you can't tell what happened from the available data.
+  添加日志、指标、链路追踪和告警，让生产行为可观察、可诊断。；Instruments code so production behavior is visible and diagnosable. Use when
+  adding logging, metrics, tracing, or alerting. Use when shipping any feature that runs in production and you
+  need evidence it works. Use when production issues are reported but you can't tell what happened from the
+  available data.
 ---
+
 # Observability and Instrumentation
 
 ## Overview

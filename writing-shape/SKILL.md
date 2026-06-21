@@ -2,10 +2,11 @@
 name: writing-shape
 description: >
   把 markdown 原始材料通过对话打磨成可发布文章。；Take a markdown file of raw material and shape it into an article through a
-  conversational session — drafting candidate openings, growing the piece paragraph by paragraph, arguing about format
-  (lists, tables, callouts, quotes) at each step. Use when the user has a pile of notes, fragments, or a rough draft and
-  wants help turning it into something publishable.
+  conversational session — drafting candidate openings, growing the piece paragraph by paragraph, arguing about
+  format (lists, tables, callouts, quotes) at each step. Use when the user has a pile of notes, fragments, or a
+  rough draft and wants help turning it into something publishable.
 ---
+
 <what-to-do>
 
 The user has passed (or will pass) a markdown file of raw material. Treat it as the input pile — anything from a tidy list of fragments to a wall of unstructured prose to a transcript. The format does not matter. Read it end-to-end before doing anything else.

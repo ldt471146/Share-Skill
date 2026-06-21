@@ -1,10 +1,11 @@
 ---
 name: api-and-interface-design
 description: >
-  设计稳定的 API、模块边界和公共接口，适用于 REST、GraphQL、类型契约以及前后端边界。；Guides stable API and interface design. Use when designing APIs,
-  module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts
-  between modules, or establishing boundaries between frontend and backend.
+  设计稳定的 API、模块边界和公共接口，适用于 REST、GraphQL、类型契约以及前后端边界。；Guides stable API and interface design. Use when designing
+  APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type
+  contracts between modules, or establishing boundaries between frontend and backend.
 ---
+
 # API and Interface Design
 
 ## Overview

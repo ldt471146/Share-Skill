@@ -1,9 +1,11 @@
 ---
 name: spec-driven-development
 description: >
-  编码前先写规格，适用于新项目、新功能、重大变更或需求不清。；Creates specs before coding. Use when starting a new project, feature, or significant
-  change and no specification exists yet. Use when requirements are unclear, ambiguous, or only exist as a vague idea.
+  编码前先写规格，适用于新项目、新功能、重大变更或需求不清。；Creates specs before coding. Use when starting a new project, feature, or
+  significant change and no specification exists yet. Use when requirements are unclear, ambiguous, or only exist
+  as a vague idea.
 ---
+
 # Spec-Driven Development
 
 ## Overview

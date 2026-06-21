@@ -1,10 +1,11 @@
 ---
 name: design-an-interface
 description: >
-  用并行子 agent 生成多个差异化接口设计，用于 API、模块形状和 design it twice 探索。；Generate multiple radically different interface designs for a
-  module using parallel sub-agents. Use when user wants to design an API, explore interface options, compare module
-  shapes, or mentions "design it twice".
+  用并行子 agent 生成多个差异化接口设计，用于 API、模块形状和 design it twice 探索。；Generate multiple radically different interface designs
+  for a module using parallel sub-agents. Use when user wants to design an API, explore interface options, compare
+  module shapes, or mentions "design it twice".
 ---
+
 # Design an Interface
 
 Based on "Design It Twice" from "A Philosophy of Software Design": your first idea is unlikely to be the best. Generate multiple radically different designs, then compare.

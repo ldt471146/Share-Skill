@@ -1,11 +1,12 @@
 ---
 name: writing-fragments
 description: >
-  通过追问收集写作碎片、观点、故事和句子，作为未来文章原始材料。；Grilling session that mines the user for fragments — heterogeneous nuggets of writing
-  (claims, vignettes, sharp sentences, half-thoughts) — and appends them to a single document as raw material for a
-  future article. Use when the user wants to develop ideas before imposing structure, or mentions "fragments", "ideate",
-  or "raw material" for writing.
+  通过追问收集写作碎片、观点、故事和句子，作为未来文章原始材料。；Grilling session that mines the user for fragments — heterogeneous nuggets of
+  writing (claims, vignettes, sharp sentences, half-thoughts) — and appends them to a single document as raw
+  material for a future article. Use when the user wants to develop ideas before imposing structure, or mentions
+  "fragments", "ideate", or "raw material" for writing.
 ---
+
 <what-to-do>
 
 Run a grilling session that produces fragments. Interview the user relentlessly about whatever they want to write about. Do not impose phases, outlines, or structure — that is explicitly out of scope.

@@ -1,7 +1,7 @@
 {
   "name": "Share-Skill",
   "description": "个人 AI Agent Skills 集合，包含工程开发、前端设计、文献检索、教学、Draw.io/Visio 转换等常用技能。",
-  "updated_at": "2026-06-21T10:10:23.821476+00:00",
+  "updated_at": "2026-06-21T10:26:17.253218+00:00",
   "count": 63,
   "skills": [
     {
@@ -35,7 +35,7 @@
     {
       "name": "cnki-search",
       "directory": "cnki-search",
-      "description": "在中国知网 CNKI 检索中文学术论文、期刊、学位论文、会议论文、论文详情和参考文献。 在中国知网（CNKI）上检索学术论文。触发场景：用户要求搜索知网论文、查找文献、检索期刊/学位论文/会议论文， 或提到\"知网\"、\"CNKI\"、\"中国知网\"、\"文献检索\"、\"论文搜索\"等关键词时使用此 skill。 支持关键词检索、主题检索、作者检索、高级检索、论文详情获取、参考文献提取、批量结果导出。",
+      "description": "在中国知网 CNKI 检索中文学术论文、期刊、学位论文、会议论文、论文详情和参考文献。；在中国知网 CNKI 检索中文学术论文、期刊、学位论文、会议论文、论文详情和参考文献。 在中国知网（CNKI）上检索学术论文。触发场景：用户要求搜索知网论文、查找文献、检索期刊/学位论文/会议论文， 或提到\"知网\"、\"CNKI\"、\"中国知网\"、\"文献检索\"、\"论文搜索\"等关键词时使用此 skill。 支持关键词检索、主题检索、作者检索、高级检索、论文详情获取、参考文献提取、批量结果导出。",
       "source": "ldt471146/Share-Skill",
       "path": "cnki-search/SKILL.md"
     },
@@ -126,7 +126,7 @@
     {
       "name": "drawio-to-visio",
       "directory": "drawio-to-visio",
-      "description": "将 draw.io 流程图导出为 Visio 兼容的 SVG 格式，修复 foreignObject 文本导致的 Visio 文字偏移和不可编辑问题，适用于将 .drawio 导出结果导入 Microsoft Visio 编辑。；Use when converting draw.io diagrams to Visio-compatible SVG, fixing foreignObject text rendering, or preparing .drawio exports for Microsoft Visio editing.",
+      "description": "将 draw.io 流程图导出为 Visio 兼容的 SVG 格式，修复 foreignObject 文本导致的 Visio 文字偏移和不可编辑问题，适用于将 .drawio 导出结果导入 Microsoft Visio 编辑。；将 draw.io 流程图导出为 Visio 兼容的 SVG 格式。draw.io 默认导出的 SVG 使用 foreignObject 渲染文本，Visio 无法正确解析导致文字位置偏移。本技能通过将 foreignObject 转换为标准 SVG text 元素，解决 Visio 导入时的文本显示问题。当用户需要将 draw.io 流程图导入 Microsoft Visio 编辑时使用。",
       "source": "PanJitao/drawio-to-visio",
       "path": "drawio-to-visio/SKILL.md"
     },

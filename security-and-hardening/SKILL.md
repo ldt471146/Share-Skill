@@ -1,10 +1,11 @@
 ---
 name: security-and-hardening
 description: >
-  加固处理用户输入、认证、数据存储和第三方集成的代码安全。；Hardens code against vulnerabilities. Use when handling user input, authentication, data
-  storage, or external integrations. Use when building any feature that accepts untrusted data, manages user sessions,
-  or interacts with third-party services.
+  加固处理用户输入、认证、数据存储和第三方集成的代码安全。；Hardens code against vulnerabilities. Use when handling user input, authentication,
+  data storage, or external integrations. Use when building any feature that accepts untrusted data, manages user
+  sessions, or interacts with third-party services.
 ---
+
 # Security and Hardening
 
 ## Overview

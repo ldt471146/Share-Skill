@@ -1,10 +1,11 @@
 ---
 name: writing-great-skills
 description: >
-  编写和编辑高质量 skills 的参考规则，帮助 skill 更可预测。；Reference for writing and editing skills well — the vocabulary and principles
-  that make a skill predictable.
+  编写和编辑高质量 skills 的参考规则，帮助 skill 更可预测。；Reference for writing and editing skills well — the vocabulary and
+  principles that make a skill predictable.
 disable-model-invocation: true
 ---
+
 A skill exists to wrangle determinism out of a stochastic system. **Predictability** — the agent taking the same _process_ every run, not producing the same output — is the root virtue; every lever below serves it.
 
 **Bold terms** are defined in [`GLOSSARY.md`](GLOSSARY.md); look them up there for the full meaning.

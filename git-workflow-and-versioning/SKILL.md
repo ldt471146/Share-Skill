@@ -4,6 +4,7 @@ description: >
   组织 Git 工作流、分支、提交、冲突解决和多条并行工作流。；Structures git workflow practices. Use when making any code change. Use when
   committing, branching, resolving conflicts, or when you need to organize work across multiple parallel streams.
 ---
+
 # Git Workflow and Versioning
 
 ## Overview

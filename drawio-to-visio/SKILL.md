@@ -2,8 +2,8 @@
 name: drawio-to-visio
 description: >
   将 draw.io 流程图导出为 Visio 兼容的 SVG 格式，修复 foreignObject 文本导致的 Visio 文字偏移和不可编辑问题，适用于将 .drawio 导出结果导入 Microsoft Visio
-  编辑。；Use when converting draw.io diagrams to Visio-compatible SVG, fixing foreignObject text rendering, or
-  preparing .drawio exports for Microsoft Visio editing.
+  编辑。；将 draw.io 流程图导出为 Visio 兼容的 SVG 格式。draw.io 默认导出的 SVG 使用 foreignObject 渲染文本，Visio 无法正确解析导致文字位置偏移。本技能通过将
+  foreignObject 转换为标准 SVG text 元素，解决 Visio 导入时的文本显示问题。当用户需要将 draw.io 流程图导入 Microsoft Visio 编辑时使用。
 ---
 
 # Draw.io to Visio SVG 转换

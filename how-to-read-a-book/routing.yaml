@@ -1,0 +1,52 @@
+version: 1
+always_read: []
+selection: >
+  先按用户目的和材料选一条主流程。时间有限、想选书或只初步了解时用 inspection；
+  确认是想象文学且要理解/欣赏时用 imaginative；论说作品单书深读用 analytical；
+  多本书围绕同一问题研究用 syntopical；用户主要要求检查笔记或回答用 understanding；
+  字句理解受阻、主要咨询阅读方法或专门练习阅读技巧时用 practice；咨询具体书类方法时仍按 genres 加载相应规则。
+  只为消遣或获取资讯时按用户需要提供轻量帮助，不自动升级为完整分析。
+task_routes:
+  - id: inspection
+    labels: [选书, 初步了解]
+    workflow: workflows/inspection.md
+    trigger_examples: [这本书值不值得读, 我只有二十分钟先了解一下, 这本难书第一次该怎么读]
+  - id: analytical
+    labels: [单书深读]
+    workflow: workflows/analytical.md
+    trigger_examples: [带我读懂这本论说书, 梳理作者的论证, 判断作者说得有没有道理]
+  - id: imaginative
+    labels: [文学阅读]
+    workflow: workflows/imaginative.md
+    trigger_examples: [带我读这部小说, 怎样读这首诗, 帮我理解这部戏剧]
+  - id: syntopical
+    labels: [主题阅读]
+    workflow: workflows/syntopical.md
+    trigger_examples: [围绕一个问题比较这些书, 不同作者对这个问题有什么分歧]
+  - id: understanding
+    labels: [理解核对]
+    workflow: workflows/understanding.md
+    trigger_examples: [看看我的读书笔记对不对, 检验我是不是读懂了, 检查这份摘要有没有误读]
+  - id: practice
+    labels: [方法咨询, 能力练习]
+    workflow: workflows/practice.md
+    trigger_examples: [这句话我读不懂, 帮我练习阅读技巧, 数学证明该怎么读, 不接受实用书目标是否必须行动, 怎么选择提升理解力的书]
+genres:
+  practical:
+    when: 论述目标与实现目标的办法，包括操作建议和行动原则
+    rules: rules/genres/practical.md
+  literature:
+    when: 小说、故事、戏剧、诗等想象文学
+    rules: rules/genres/literature.md
+  history:
+    when: 历史、传记、自传、新闻及文摘
+    rules: rules/genres/history.md
+  science:
+    when: 科学论著、数学和相关通俗作品
+    rules: rules/genres/science.md
+  philosophy:
+    when: 哲学、伦理、形而上学、神学与经书
+    rules: rules/genres/philosophy.md
+  social_science:
+    when: 社会科学及混合学科作品
+    rules: rules/genres/social-science.md

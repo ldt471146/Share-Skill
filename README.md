@@ -4,7 +4,7 @@
 
 ## 统计
 
-- Skills 数量：63
+- Skills 数量：64
 - 格式：每个 skill 一个目录，目录内包含 `SKILL.md`。
 - 索引：`skills.json`。
 
@@ -13,7 +13,7 @@
 - `PanJitao/drawio-to-visio`：1 个
 - `addyosmani/agent-skills`：24 个
 - `impeccable.style`：1 个
-- `ldt471146/Share-Skill`：3 个
+- `ldt471146/Share-Skill`：4 个
 - `mattpocock/skills`：34 个
 
 ## Skills
@@ -46,6 +46,7 @@
 | [`grill-with-docs`](grill-with-docs/SKILL.md) | `mattpocock/skills` | 通过高强度追问澄清计划或设计，并同步生成 ADR、术语表和上下文文档。；A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go. |
 | [`grilling`](grilling/SKILL.md) | `mattpocock/skills` | 可复用的追问循环，用于压力测试计划、设计和所有 grill 类请求。；Interview the user relentlessly about a plan or design. Use when the user wants to stress-test a plan before building, or uses any 'grill' tri... |
 | [`handoff`](handoff/SKILL.md) | `mattpocock/skills` | 把当前对话压缩成交接文档，方便另一个 agent 或后续会话接手。；Compact the current conversation into a handoff document for another agent to pick up. |
+| [`how-to-read-a-book`](how-to-read-a-book/SKILL.md) | `ldt471146/Share-Skill` | 依据《如何阅读一本书》的规则进行检视、分析、主题阅读和读书笔记核对。 |
 | [`idea-refine`](idea-refine/SKILL.md) | `addyosmani/agent-skills` | 把模糊想法通过发散和收敛思考打磨成可执行概念，适合 ideate、refine 和 stress-test。；Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea i... |
 | [`impeccable`](impeccable/SKILL.md) | `impeccable.style` | 前端设计和界面打磨 skill，适用于设计、重设计、审查、审计、抛光、排版、配色、布局、动效、响应式、可访问性、性能、错误状态、空状态、设计系统和去 AI 味。；Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, h... |
 | [`implement`](implement/SKILL.md) | `mattpocock/skills` | 根据 PRD 或 issues 执行实现工作。；Implement a piece of work based on a PRD or set of issues. |

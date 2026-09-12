@@ -1,8 +1,8 @@
 {
   "name": "Share-Skill",
   "description": "个人 AI Agent Skills 集合，包含工程开发、前端设计、文献检索、教学、Draw.io/Visio 转换等常用技能。",
-  "updated_at": "2026-06-21T10:26:17.253218+00:00",
-  "count": 63,
+  "updated_at": "2026-09-12T10:06:26.399184+00:00",
+  "count": 64,
   "skills": [
     {
       "name": "api-and-interface-design",
@@ -185,6 +185,13 @@
       "description": "把当前对话压缩成交接文档，方便另一个 agent 或后续会话接手。；Compact the current conversation into a handoff document for another agent to pick up.",
       "source": "mattpocock/skills",
       "path": "handoff/SKILL.md"
+    },
+    {
+      "name": "how-to-read-a-book",
+      "directory": "how-to-read-a-book",
+      "description": "依据艾德勒与范多伦《如何阅读一本书》帮助用户阅读书籍、理解作者、检验读书笔记和比较同题著作。 当用户说“带我读这本书”“按如何阅读一本书来读”“我是否读懂了”“帮我做主题阅读”时使用。 适合希望有方法地理解不同类型读物的人；单纯格式转换、排版或查一个事实不需要此技能。",
+      "source": "ldt471146/Share-Skill",
+      "path": "how-to-read-a-book/SKILL.md"
     },
     {
       "name": "idea-refine",

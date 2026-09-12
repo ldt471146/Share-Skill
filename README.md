@@ -1,10 +1,10 @@
 # Share-Skill
 
-个人 AI Agent Skills 集合。当前仓库同步自本机 CC Switch skills，所有 `description` 已尽量改为中文说明 + 保留英文触发语，方便中文使用时识别用途，同时保留自动触发关键词。
+个人 AI Agent Skills 集合。包含从本机 CC Switch 同步的 skills 和自主维护的阅读套件，所有 `description` 已尽量改为中文说明 + 保留英文触发语，方便中文使用时识别用途，同时保留自动触发关键词。
 
 ## 统计
 
-- Skills 数量：64
+- Skills 数量：66
 - 格式：每个 skill 一个目录，目录内包含 `SKILL.md`。
 - 索引：`skills.json`。
 
@@ -13,7 +13,7 @@
 - `PanJitao/drawio-to-visio`：1 个
 - `addyosmani/agent-skills`：24 个
 - `impeccable.style`：1 个
-- `ldt471146/Share-Skill`：4 个
+- `ldt471146/Share-Skill`：6 个
 - `mattpocock/skills`：34 个
 
 ## Skills
@@ -42,11 +42,12 @@
 | [`frontend-ui-engineering`](frontend-ui-engineering/SKILL.md) | `addyosmani/agent-skills` | 构建生产级前端界面、组件、布局、状态管理和可访问性体验。；Builds production-quality UIs. Use when building or modifying user-facing interfaces. Use when creating components, implementing layouts, managing s... |
 | [`git-guardrails-claude-code`](git-guardrails-claude-code/SKILL.md) | `mattpocock/skills` | 为 Claude Code 设置 Git 安全钩子，阻止 push、reset --hard、clean、branch -D 等危险命令。；Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) befor... |
 | [`git-workflow-and-versioning`](git-workflow-and-versioning/SKILL.md) | `addyosmani/agent-skills` | 组织 Git 工作流、分支、提交、冲突解决和多条并行工作流。；Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, or when you need to organ... |
+| [`github-project-learning`](github-project-learning/SKILL.md) | `ldt471146/Share-Skill` | 学习 GitHub 教程和项目实现，核对版本、代码依据、最小示例和学习笔记；依赖阅读套件。 |
 | [`grill-me`](grill-me/SKILL.md) | `mattpocock/skills` | 通过高强度追问澄清计划或设计，适合非代码和通用决策。；A relentless interview to sharpen a plan or design. |
 | [`grill-with-docs`](grill-with-docs/SKILL.md) | `mattpocock/skills` | 通过高强度追问澄清计划或设计，并同步生成 ADR、术语表和上下文文档。；A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go. |
 | [`grilling`](grilling/SKILL.md) | `mattpocock/skills` | 可复用的追问循环，用于压力测试计划、设计和所有 grill 类请求。；Interview the user relentlessly about a plan or design. Use when the user wants to stress-test a plan before building, or uses any 'grill' tri... |
 | [`handoff`](handoff/SKILL.md) | `mattpocock/skills` | 把当前对话压缩成交接文档，方便另一个 agent 或后续会话接手。；Compact the current conversation into a handoff document for another agent to pick up. |
-| [`how-to-read-a-book`](how-to-read-a-book/SKILL.md) | `ldt471146/Share-Skill` | 依据《如何阅读一本书》的规则进行检视、分析、主题阅读和读书笔记核对。 |
+| [`how-to-read-a-book`](how-to-read-a-book/SKILL.md) | `ldt471146/Share-Skill` | 阅读套件主入口：原书规则、普通书籍带读、读书笔记与主题阅读。 |
 | [`idea-refine`](idea-refine/SKILL.md) | `addyosmani/agent-skills` | 把模糊想法通过发散和收敛思考打磨成可执行概念，适合 ideate、refine 和 stress-test。；Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea i... |
 | [`impeccable`](impeccable/SKILL.md) | `impeccable.style` | 前端设计和界面打磨 skill，适用于设计、重设计、审查、审计、抛光、排版、配色、布局、动效、响应式、可访问性、性能、错误状态、空状态、设计系统和去 AI 味。；Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, h... |
 | [`implement`](implement/SKILL.md) | `mattpocock/skills` | 根据 PRD 或 issues 执行实现工作。；Implement a piece of work based on a PRD or set of issues. |
@@ -61,6 +62,7 @@
 | [`prototype`](prototype/SKILL.md) | `mattpocock/skills` | 构建可丢弃原型，用终端应用或多套 UI 变体探索设计。；Build a throwaway prototype to flesh out a design — a runnable terminal app for state/business-logic questions, or several radically different UI var... |
 | [`qa`](qa/SKILL.md) | `mattpocock/skills` | 交互式 QA 会话，用户口头报告 bug 后由 agent 补上下文并创建 GitHub issues。；Interactive QA session where user reports bugs or issues conversationally, and the agent files GitHub issues. Explores the c... |
 | [`request-refactor-plan`](request-refactor-plan/SKILL.md) | `mattpocock/skills` | 通过访谈创建小提交粒度的重构计划，并作为 GitHub issue 发布。；Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Use when user wants to plan a refacto... |
+| [`research-reading`](research-reading/SKILL.md) | `ldt471146/Share-Skill` | 理解科研论文、比较研究证据并形成研究笔记，区分作者主张、实验条件和复现状态；依赖阅读套件。 |
 | [`resolving-merge-conflicts`](resolving-merge-conflicts/SKILL.md) | `mattpocock/skills` | 解决正在进行的 git merge 或 rebase 冲突。；Use when you need to resolve an in-progress git merge/rebase conflict. |
 | [`review`](review/SKILL.md) | `mattpocock/skills` | 从指定提交、分支、tag 或 merge-base 起审查改动，按标准符合度和规格符合度并行评审。；Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow th... |
 | [`scaffold-exercises`](scaffold-exercises/SKILL.md) | `mattpocock/skills` | 生成课程练习目录、题目、解答和讲解结构，并确保通过 lint。；Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exerci... |
@@ -84,6 +86,12 @@
 | [`writing-fragments`](writing-fragments/SKILL.md) | `mattpocock/skills` | 通过追问收集写作碎片、观点、故事和句子，作为未来文章原始材料。；Grilling session that mines the user for fragments — heterogeneous nuggets of writing (claims, vignettes, sharp sentences, half-thoughts) — and a... |
 | [`writing-great-skills`](writing-great-skills/SKILL.md) | `mattpocock/skills` | 编写和编辑高质量 skills 的参考规则，帮助 skill 更可预测。；Reference for writing and editing skills well — the vocabulary and principles that make a skill predictable. |
 | [`writing-shape`](writing-shape/SKILL.md) | `mattpocock/skills` | 把 markdown 原始材料通过对话打磨成可发布文章。；Take a markdown file of raw material and shape it into an article through a conversational session — drafting candidate openings, growing the piece ... |
+
+## 阅读套件
+
+`how-to-read-a-book` 是统一入口和原书规则的维护位置；`research-reading` 负责专业论文，`github-project-learning` 负责教程与项目学习。三个技能共用一份笔记约定，应从同一版本一起安装，见 [安装与维护](how-to-read-a-book/INSTALL.md)。
+
+可直接说“带我读这篇论文并做科研笔记”“教我这个 GitHub 项目如何工作”，或用 `$how-to-read-a-book` 整理书籍笔记。科研和代码流程是原书原则的应用扩展，原书提炼和新增约定分别注明来源。版本记录与实际验证范围见 [验证记录](how-to-read-a-book/references/validation.md)。
 
 ## 安装说明
 

@@ -1,8 +1,8 @@
 {
   "name": "Share-Skill",
-  "description": "个人 AI Agent Skills 集合，包含工程开发、前端设计、文献检索、教学、Draw.io/Visio 转换等常用技能。",
-  "updated_at": "2026-09-12T10:06:26.399184+00:00",
-  "count": 64,
+  "description": "个人 AI Agent Skills 集合，包含工程开发、前端设计、文献检索、科研阅读、GitHub 学习、读书笔记、Draw.io/Visio 转换等常用技能。",
+  "updated_at": "2026-09-12T10:20:38.400478+00:00",
+  "count": 66,
   "skills": [
     {
       "name": "api-and-interface-design",
@@ -159,6 +159,13 @@
       "path": "git-workflow-and-versioning/SKILL.md"
     },
     {
+      "name": "github-project-learning",
+      "directory": "github-project-learning",
+      "description": "帮助用户学习 GitHub 仓库中的教程、示例与项目实现。 当用户说“带我学这个 GitHub 项目”“解释这个仓库怎么工作”“按这个教程教我”或“整理项目学习笔记”时使用。 适用于理解教程和代码；单独的仓库管理、故障修复、代码审查或部署任务不自动启用。",
+      "source": "ldt471146/Share-Skill",
+      "path": "github-project-learning/SKILL.md"
+    },
+    {
       "name": "grill-me",
       "directory": "grill-me",
       "description": "通过高强度追问澄清计划或设计，适合非代码和通用决策。；A relentless interview to sharpen a plan or design.",
@@ -189,7 +196,7 @@
     {
       "name": "how-to-read-a-book",
       "directory": "how-to-read-a-book",
-      "description": "依据艾德勒与范多伦《如何阅读一本书》帮助用户阅读书籍、理解作者、检验读书笔记和比较同题著作。 当用户说“带我读这本书”“按如何阅读一本书来读”“我是否读懂了”“帮我做主题阅读”时使用。 适合希望有方法地理解不同类型读物的人；单纯格式转换、排版或查一个事实不需要此技能。",
+      "description": "依据艾德勒与范多伦《如何阅读一本书》帮助用户读书、生成或核对读书笔记、检验理解和比较同题著作。 当用户说“带我读这本书”“按如何阅读一本书来读”“帮我做读书笔记”“我是否读懂了”或“帮我做主题阅读”时使用。 也是阅读套件的统一入口：专业论文交给 research-reading，GitHub 教程与项目学习交给 github-project-learning。 单纯格式转换、排版或查一个事实不需要本技能。",
       "source": "ldt471146/Share-Skill",
       "path": "how-to-read-a-book/SKILL.md"
     },
@@ -290,6 +297,13 @@
       "description": "通过访谈创建小提交粒度的重构计划，并作为 GitHub issue 发布。；Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe incremental steps.",
       "source": "mattpocock/skills",
       "path": "request-refactor-plan/SKILL.md"
+    },
+    {
+      "name": "research-reading",
+      "directory": "research-reading",
+      "description": "帮助用户理解科研论文、比较研究证据、检查论文理解并形成研究笔记。 当用户说“带我读这篇论文”“比较这些论文”“这篇研究能支持什么结论”或“整理科研阅读笔记”时使用。 论文与其代码需要一起理解时适用；以学会 GitHub 项目使用或实现为主时使用 github-project-learning。",
+      "source": "ldt471146/Share-Skill",
+      "path": "research-reading/SKILL.md"
     },
     {
       "name": "resolving-merge-conflicts",
